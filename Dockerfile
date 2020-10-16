@@ -63,8 +63,7 @@ WORKDIR /fluent-bit
 RUN CGO_ENABLED=0 go build -o fluent-bit main.go
 
 FROM gcr.io/distroless/cc-debian10
-MAINTAINER KubeSphere <kubesphere@yunify.com>
-LABEL Description="Fluent Bit docker image" Vendor="KubeSphere Organization" Version="1.0"
+LABEL Description="Fluent Bit docker image" Vendor="lisy09" Version="1.0"
 
 COPY --from=builderc /usr/lib/x86_64-linux-gnu/*sasl* /usr/lib/x86_64-linux-gnu/
 COPY --from=builderc /usr/lib/x86_64-linux-gnu/libz* /usr/lib/x86_64-linux-gnu/
